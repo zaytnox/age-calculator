@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-light-red: hsl(0, 100%, 67%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-off-white: hsl(0, 0%, 94%);
+  --neutral-light-grey: hsl(0, 0%, 86%);
+  --neutral-smokey-grey: hsl(0, 1%, 54%);
+  --neutral-off-black: hsl(0, 0%, 8%);
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+}
+input,
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* Remove arrows input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+  appearance: textfield;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: var(--neutral-off-white);
+  padding: 0 16px;
+}
+
+.card {
+  width: 100%;
+  padding: 52px;
+  border-radius: 16px 16px 160px 16px;
+  background-color: var(--neutral-white);
+}
+
+.date-form {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  gap: 80px;
+  margin-bottom: 52px;
+  border-bottom: 2px solid var(--neutral-off-white);
+}
+
+.date-inputs {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 32px;
+}
+
+.date-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: var(--neutral-smokey-grey);
+}
+
+.date-inputs input {
+  width: 100%;
+  max-width: 160px;
+  padding: 12px 16px;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--neutral-off-black);
+  border: 1px solid var(--neutral-light-grey);
+  border-radius: 8px;
+}
+.date-inputs input::placeholder {
+  font-weight: 700;
+  color: var(--neutral-smokey-grey);
+}
+.date-inputs input:focus {
+  border-color: var(--primary-purple);
+}
+
+.date-inputs span {
+  display: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  font-style: italic;
+  color: var(--primary-light-red);
+}
+
+.date-inputs.error label {
+  color: var(--primary-light-red);
+}
+.date-inputs.error input {
+  border-color: var(--primary-light-red);
+}
+.date-inputs.error span {
+  display: block;
+}
+
+#calculate {
+  min-width: 92px;
+  min-height: 92px;
+  padding: 24px;
+  transform: translateY(50%);
+  border-radius: 50%;
+  background-color: var(--primary-purple);
+}
+#calculate img {
+  width: 100%;
+}
+#calculate:hover {
+  background-color: var(--neutral-off-black);
+  cursor: pointer;
+}
+
+.age {
+  font-size: 10rem;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 112%;
+}
+
+.age div {
+  display: flex;
+  gap: 8px;
+}
+.age span {
+  color: var(--primary-purple);
+}
+
+@media (max-width: 768px) {
+  .date-inputs input {
+    max-width: max-content;
+    font-size: 2.8rem;
+  }
+  .age {
+    font-size: 7.2rem;
+  }
+  .date-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .date-inputs {
+    padding: 0;
+  }
+  #calculate {
+    min-width: 60px;
+    min-height: 60px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .date-inputs input {
+    font-size: 2rem;
+  }
+  .age {
+    font-size: 5.2rem;
+  }
+  .card {
+    padding: 32px 24px;
+  }
+}
