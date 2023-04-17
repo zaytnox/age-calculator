@@ -40,7 +40,7 @@ input[type='number'] {
 body {
   display: grid;
   place-content: center;
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--neutral-off-white);
   padding: 0 16px;
 }
