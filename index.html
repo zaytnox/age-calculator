@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <form action="" class="date-form">
+          <div class="date-inputs">
+            <label for="day"
+              >DAY <input type="number" id="day" placeholder="DD" />
+              <span class="day-error message-error"></span>
+            </label>
+            <label for="month"
+              >MONTH <input type="number" id="month" placeholder="MM" /><span
+                class="month-error message-error"
+              ></span
+            ></label>
+            <label for="year"
+              >YEAR <input type="number" id="year" placeholder="YYYY" /><span
+                class="year-error message-error"
+              ></span
+            ></label>
+          </div>
+          <button type="submit" id="calculate">
+            <img src="./assets/images/icon-arrow.svg" alt="" />
+          </button>
+        </form>
+        <div class="age">
+          <div class="years-old">
+            <span>- -</span>
+            <p>years</p>
+          </div>
+          <div class="months-old">
+            <span>- -</span>
+            <p>months</p>
+          </div>
+          <div class="days-old">
+            <span>- -</span>
+            <p>days</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
